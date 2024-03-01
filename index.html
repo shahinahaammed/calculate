@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+    <input type="text" id="input">
+    <br>
+    <br>
+ <div class="buttonmain">
+    <button type="button"  onclick="button(value)" class="calbutton" value="1">1</button>
+    <button type="button"  onclick="button(value)" class="calbutton" value="2">2</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="3">3</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="*">*</button>
+    <br>
+    <button type="button" onclick="button(value)" class="calbutton" value="4">4</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="5">5</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="6">6</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="+">+</button>
+    <br>
+    <button type="button" onclick="button(value)" class="calbutton" value="7">7</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="8">8</button>
+    <button type="button"  onclick="button(value)" class="calbutton" value="9">9</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="/">/</button>
+    <br>
+    <button type="button" onclick="button(value)" class="calbutton" value="-" >-</button>
+    <button type="button" onclick="button(value)" class="calbutton" value="0">0</button>
+    <button type="button" onclick="findvalue()" class="calbutton" value="=">=</button>
+    <button type="button" onclick="clearscreen()" class="calbutton" value="C">C</button>
+ </div>
+</div>
+    <script>
+        var clickinput = document.getElementById('input');
+
+        function button(value){
+            clickinput.value += value;
+        }
+        function clearscreen(){
+            clickinput.value ="";
+        }
+        function findvalue(){
+            var result = eval(clickinput.value)
+            clickinput.value = result;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
